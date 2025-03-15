@@ -1,0 +1,26 @@
+{
+  "name": "master-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run tailwind\" \"npm run serve\"",
+    "dev": "live-server ./ --port=5500 --watch=index.html,css/output.css & npm run tailwind",
+    "tailwind": "npx @tailwindcss/cli -i ./css/styles.css -o ./css/output.css --watch",
+    "serve": "live-server ./ --port=5500 --watch=index.html,css/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "@tailwindcss/postcss": "^4.0.14"
+  }
+}

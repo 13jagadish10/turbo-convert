@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+    <title>Special Conversions | TurboConvert</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/output.css" />
+  </head>
+  <body
+    class="bg-gray-100 text-black/80 max-h-screen overflow-hidden flex flex-col"
+  >
+    <nav
+      class="bg-white w-full z-20 top-0 left-0 border-b border-gray-300 shadow-md flex-shrink-0"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 py-2"
+      >
+        <!-- Logo & Brand Name -->
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/assets/logo.png" class="h-14 w-14" alt="logo" />
+          <span class="self-center text-2xl font-extrabold text-cyan-600"
+            >TurboConvert</span
+          >
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-600 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+
+        <!-- Navigation Links -->
+        <div id="navbar" class="hidden md:flex items-center space-x-6">
+          <a
+            href="/number-system"
+            class="text-gray-700 border-2 border-cyan-500 rounded-md p-2 py-[6px] hover:bg-cyan-500 hover:text-white font-medium transition"
+            >Number System</a
+          >
+          <a
+            href="/text-encoding"
+            class="text-gray-700 border-2 border-purple-500 rounded-md p-2 py-[6px] hover:bg-purple-500 hover:text-white font-medium transition"
+            >Text Encoding</a
+          >
+          <a
+            href="/special"
+            class="border-2 border-teal-500 rounded-md p-2 py-[6px] bg-teal-500 text-white font-medium transition"
+            >Special
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden flex flex-col items-center bg-white shadow-md border-t border-gray-200 md:hidden"
+      >
+        <a
+          href="/number-system"
+          class="w-full text-center py-2 text-gray-700 hover:bg-cyan-100"
+          >Number System
+        </a>
+        <a
+          href="/text-encoding"
+          class="w-full text-center py-2 text-gray-700 hover:bg-cyan-100"
+          >Text Encoding
+        </a>
+        <a
+          href="/special"
+          class="w-full text-center py-2 text-gray-700 hover:bg-cyan-100"
+          >Special
+        </a>
+      </div>
+    </nav>
+    <main class="flex-grow overflow-y-auto">
+      <section class="main min-h-screen">
+        <section
+          class="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-12 px-6"
+        >
+          <div class="max-w-6xl mx-auto text-center">
+            <h1
+              class=" text-2xl md:text-4xl font-bold flex justify-center items-center gap-3"
+            >
+              <i class="fas fa-exchange-alt text-white  text-3xl md:text-4xl"></i>
+              Special Conversions
+            </h1>
+            <p class="text-sm md:text-lg mt-3">
+              Advanced conversions including encoding, network addressing, color
+              formats, and numeral systems.
+            </p>
+          </div>
+
+          <!-- Conversion List -->
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          >
+            <!-- Base64 Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-lock text-teal-600 text-2xl"></i>
+              <p class="font-medium">Base64 ↔ Text</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-code text-teal-600 text-2xl"></i>
+              <p class="font-medium">Base64 ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-th text-teal-600 text-2xl"></i>
+              <p class="font-medium">Base64 ↔ Hexadecimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-microchip text-teal-600 text-2xl"></i>
+              <p class="font-medium">Base64 ↔ ASCII</p>
+            </div>
+
+            <!-- IP Address Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-network-wired text-teal-600 text-2xl"></i>
+              <p class="font-medium">IP Address ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-sort-numeric-up text-teal-600 text-2xl"></i>
+              <p class="font-medium">IP Address ↔ Decimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-dice-six text-teal-600 text-2xl"></i>
+              <p class="font-medium">IP Address ↔ Hexadecimal</p>
+            </div>
+
+            <!-- MAC Address Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-microchip text-teal-600 text-2xl"></i>
+              <p class="font-medium">MAC Address ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-hashtag text-teal-600 text-2xl"></i>
+              <p class="font-medium">MAC Address ↔ Decimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-calculator text-teal-600 text-2xl"></i>
+              <p class="font-medium">MAC Address ↔ Hexadecimal</p>
+            </div>
+
+            <!-- UUID Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-fingerprint text-teal-600 text-2xl"></i>
+              <p class="font-medium">UUID ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-sort-numeric-up text-teal-600 text-2xl"></i>
+              <p class="font-medium">UUID ↔ Decimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-h-square text-teal-600 text-2xl"></i>
+              <p class="font-medium">UUID ↔ Hexadecimal</p>
+            </div>
+
+            <!-- Endian & Color Code Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-random text-teal-600 text-2xl"></i>
+              <p class="font-medium">Endian Conversion</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-palette text-teal-600 text-2xl"></i>
+              <p class="font-medium">Color Code Conversion</p>
+            </div>
+
+            <!-- BCD & Gray Code Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-microchip text-teal-600 text-2xl"></i>
+              <p class="font-medium">BCD ↔ Decimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-digital-tachograph text-teal-600 text-2xl"></i>
+              <p class="font-medium">BCD ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-exchange-alt text-teal-600 text-2xl"></i>
+              <p class="font-medium">Gray Code ↔ Binary</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-th text-teal-600 text-2xl"></i>
+              <p class="font-medium">Gray Code ↔ Decimal</p>
+            </div>
+
+            <!-- Roman Numeral Conversions -->
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-italic text-teal-600 text-2xl"></i>
+              <p class="font-medium">Roman Numerals ↔ Decimal</p>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-white text-teal-800 p-4 rounded-lg shadow-md"
+            >
+              <i class="fas fa-sort-numeric-down text-teal-600 text-2xl"></i>
+              <p class="font-medium">Roman Numerals ↔ Binary</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-teal-600 to-teal-800 py-10">
+          <div
+            class="max-w-2xl mx-auto p-3 md:p-6 bg-white shadow-lg shadow-teal-600 rounded-lg"
+          >
+            <h2 class="text-2xl font-bold text-teal-700 text-center mb-4">
+              Special Conversions
+            </h2>
+            <div class="bg-white p-2 md:p-4 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- From Selection -->
+                <div>
+                  <label for="from" class="block text-teal-700 font-semibold"
+                    >From</label
+                  >
+                  <select
+                    id="from"
+                    class="w-full p-2 border rounded-md text-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  >
+                  <option value="Base64">Base64</option>
+                  <option value="Text">Text</option>
+                  <option value="Binary">Binary</option>
+                  <option value="Hexadecimal">Hexadecimal</option>
+                  <option value="ASCII">ASCII</option>
+                  <option value="IP Address">IP Address</option>
+                  <option value="Decimal">Decimal</option>
+                  <option value="MAC Address">MAC Address</option>
+                  <option value="UUID">UUID</option>
+                  <option value="Little Endian">Little Endian</option>
+                  <option value="Big Endian">Big Endian</option>
+                  <option value="RGB">RGB (Color)</option>
+                  <option value="Hex">Hex (Color)</option>
+                  <option value="HSL">HSL (Color)</option>
+                  <option value="CMYK">CMYK (Color)</option>
+                  <option value="BCD">BCD (Binary Coded Decimal)</option>
+                  <option value="Gray Code">Gray Code</option>
+                  <option value="Roman">Roman Numerals</option>
+                  </select>
+                </div>
+                <!-- To Selection -->
+                <div>
+                  <label for="to" class="block text-teal-700 font-semibold"
+                    >To</label
+                  >
+                  <select
+                    id="to"
+                    class="w-full p-2 border rounded-md text-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  >
+                    <option value="Base64">Base64</option>
+                    <option value="Text">Text</option>
+                    <option value="Binary">Binary</option>
+                    <option value="Hexadecimal">Hexadecimal</option>
+                    <option value="ASCII">ASCII</option>
+                    <option value="IP Address">IP Address</option>
+                    <option value="Decimal">Decimal</option>
+                    <option value="MAC Address">MAC Address</option>
+                    <option value="UUID">UUID</option>
+                    <option value="Little Endian">Little Endian</option>
+                    <option value="Big Endian">Big Endian</option>
+                    <option value="RGB">RGB (Color)</option>
+                    <option value="Hex">Hex (Color)</option>
+                    <option value="HSL">HSL (Color)</option>
+                    <option value="CMYK">CMYK (Color)</option>
+                    <option value="BCD">BCD (Binary Coded Decimal)</option>
+                    <option value="Gray Code">Gray Code</option>
+                    <option value="Roman">Roman Numerals</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Input and Output -->
+              <div class="mt-4">
+                <label
+                  for="inputValue"
+                  class="block text-teal-700 font-semibold"
+                  >Enter Value</label
+                >
+                <textarea
+                  id="inputValue"
+                  rows="3"
+                  class="w-full p-2 border rounded-md text-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                ></textarea>
+              </div>
+              <div class="mt-4 flex justify-center">
+                <button
+                  id="convertBtn"
+                  class="px-6 py-2 bg-teal-600 text-white font-semibold rounded-md hover:bg-teal-700 focus:ring-2 focus:ring-teal-500 flex items-center gap-2 cursor-pointer"
+                >
+                  <i class="fas fa-exchange-alt"></i> Convert
+                </button>
+              </div>
+              <div class="mt-4">
+                <label
+                  for="outputValue"
+                  class="block text-teal-700 font-semibold"
+                  >Converted Value</label
+                >
+                <textarea
+                  id="outputValue"
+                  rows="3"
+                  readonly
+                  class="w-full p-2 border rounded-md bg-gray-100 text-teal-800"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <footer
+        class="bg-black text-cyan-200 py-6 text-center flex flex-wrap justify-evenly items-center px-4 md:px-6"
+      >
+        <p class="text-lg font-semibold">
+          A project by
+          <code class="font-mono text-cyan-50 cursor-pointer px-2 py-1 rounded"
+            >IT Circle</code
+          >
+        </p>
+        <div class="">
+          <p class="text-sm">
+            Designed & Developed by
+            <code
+              class="font-mono text-cyan-50 cursor-pointer px-2 py-1 rounded"
+              >IT Circle</code
+            >
+          </p>
+          <p class="text-xs mt-1 opacity-80">
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            | All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/conversions.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss";
+
+.nav-bg {
+    background: linear-gradient(135deg, #00bcd4, #008ba3);
+}
